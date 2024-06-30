@@ -1,15 +1,13 @@
 #!/bin/sh
-
 # 下载规则
-curl -o i-1.txt https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
-curl -o i-2.txt https://filters.adtidy.org/extension/ublock/filters/224.txt
-curl -o i-3.txt https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt
-curl -o i-4.txt https://raw.githubusercontent.com/damengzhu/abpmerge/main/EasyListnoElementRules.txt
-curl -o i-5.txt https://filters.adtidy.org/android/filters/20_optimized.txt
-curl -o i-6.txt https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-curl -o i-7.txt https://filters.adtidy.org/android/filters/17_optimized.txt
-curl -o i-8.txt http://sub.adtchrome.com/adt-chinalist-easylist.txt
-
+curl -o i-1.txt https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt
+curl -o i-2.txt https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt
+curl -o i-3.txt https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
+curl -o i-4.txthttps://ghproxy.net/https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
+curl -o i-5.txt https://ghproxy.net/https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
+curl -o i-6.txt https://ghproxy.net/https://raw.githubusercontent.com/afwfv/DD-AD/main/rule/DD-AD.txt
+curl -o i-7.txt https://www.xlxbk.cn/dns.txt
+curl -o i-8.txt https://raw.githubusercontent.com/5-whys/adh-rules/main/rules/output_medium.txt
 # 合并规则并去除重复项
 cat i*.txt > i-mergd.txt
 cat i-mergd.txt | grep -v '^!' | grep -v '^！' | grep -v '^# ' | grep -v '^# ' | grep -v '^\[' | grep -v '^\【' > i-tmpp.txt
